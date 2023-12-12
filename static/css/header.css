@@ -1,0 +1,51 @@
+header{
+    background-color: var(--surface-color);
+    height: 60px;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+}
+
+/* Left side */
+.logo{
+    width: 20%;
+    height: 100%;
+}
+
+/* Right side */
+nav{
+    width: 80%;
+    height: 100%;
+}
+
+.nav-link{
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-link a{
+    color: var(--neutral-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 2%;
+    padding: 1% 2%;
+}
+
+.nav-link a:hover{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.nav-btn span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--neutral-color);
+    margin: 6px auto;
+}
+
+#nav-check, .nav-btn{
+    display: none;
+}

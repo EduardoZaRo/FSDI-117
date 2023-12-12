@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+    <div class="img-container center">
+        <img id="about-img" src="{% static 'img/me.png' %}" alt="Me">
+    </div>
+    <div class="description-container center">
+        <div class="center" style="display:flex;flex-direction:column;">
+            <h1>Computer Engineer</h1>
+            <h2>Irvin Eduardo Zavala Roman</h2>
+        </div>
+        <p>
+            Hi! My name is Irvin. I'm a recent graduate in computer engineering from the UABC and a current student in the San Diego Global Knowledge University in the Fullstack development immersive course.
+            <br><br>
+            I have experience in high and low level programming languages, web development, artificial intelligence and embedded systems. 
+        </p>
+
+        <div class="skills-list center">
+            <h2>Skills</h2>
+            <div class="skills center">
+                <label>HTML</label>
+                <label>CSS</label>
+                <label>JS</label>
+                <label>C/C++</label>
+                <label>C#</label>
+                <label>Java</label>
+                <label>Python</label>
+                <label>PHP</label>
+                <label>React</label>
+                <label>JQuery</label>
+                <label>DJango</label>
+                <label>Flask</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

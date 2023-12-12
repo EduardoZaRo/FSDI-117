@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&family=Lobster&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sections.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+<body>
+    <header class="center">
+        <!-- Left side -->
+        <div class="logo center">
+            <a href="">
+                <h2>Irvin</h2>
+            </a>
+        </div>
+
+        <!-- Right side -->
+        <nav>
+            <!-- Hamburger icon -->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <!-- Links -->
+            <div class="nav-link center">
+                <a href="{% url 'about' %}">About me</a>
+                <a href="{% url 'projects_list' %}">Projects</a>
+                <a href="{% url 'experience_list' %}">Experience</a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <div style="background:rgb(82, 20, 31); height: 50px;display:flex;align-items:center;justify-content:center;">
+        <h2><i>Here is the footer</i></h2>
+    </div>
+
+</body>
+</html>
