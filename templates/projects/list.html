@@ -7,46 +7,21 @@
 <section class="projects-section center">
     <h2>Projects</h2>
     <div class="projects-list">
+        {% for project in projects %}
         <div class="project-card">
-            <a href="https://github.com/EduardoZaRo/FSDI-110" target="_blank">
-                <img src="{% static 'img/project-1.png' %}" alt="Project 1">
-                <p>IoT Market</p>
-                <p>Web market of electronic components</p>
-                <p> 2023 </p>
+            <a href="{{ project.repository }}" target="_blank">
+                <img src="{{ project.img }}" alt="Project 1">
+                <p>{{ project.name }}</p>
+                <p>{{ project.description }}</p>
+                <p> {{ project.year }} </p>
                 <div class="technologies center">
-                    <label>React</label>
-                    <label>Flask</label>
-                    <label>Bootstrap</label>
+                    {% for tech in project.technologies.all %}
+                    <label>{{tech.name}}</label>
+                    {% endfor %}
                 </div>
             </a>
         </div>
-        <div class="project-card">
-            <a href="https://github.com/EduardoZaRo/FSDI-104" target="_blank">
-                <img src="{% static 'img/project-2.png' %}" alt="Project 2">
-                <p>The Fashion Pet</p>
-                <p>Basic page for a pet salon</p>
-                <p> 2023 </p>
-                <div class="technologies center">
-                    <label>HTML</label>
-                    <label>CSS</label>
-                    <label>Bootstrap</label>
-                    <label>JS</label>
-                </div>
-            </a>
-        </div>
-        <div class="project-card">
-            <a href="https://github.com/EduardoZaRo/FSDI-113-Blog" target="_blank">
-                <img src="{% static 'img/project-3.png' %}" alt="Project 3">
-                <p>Blog</p>
-                <p>This is a basic blog with different roles, post types and db operations</p>
-                <p> 2023 </p>
-                <div class="technologies center">
-                    <label>DJANGO</label>
-                    <label>Sendgrid</label>
-                    <label>Bootstrap</label>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
     </div>
 </section>
 

@@ -4,6 +4,14 @@
 
 {% block content %}
 
-<h2 class="center" style="height:400px;width:100%;background:linear-gradient(to right, black, rgb(89, 89, 89));">An h2 tag?</h2>
-
+{% for e in experience %}
+    <h1>{{e.entity}}</h1>
+    <h2>{{e.title}}</h2>
+    <p>{{e.description}}</p>
+    <p>{{e.period}}</p>
+    {% for tech in e.technologies.all %}
+        <p style="color:red;margin-left: 25px;font-weight:bold;">{{tech.name}}</p>
+    {% endfor %}
+    <hr>
+{% endfor %}
 {% endblock %}
