@@ -3,15 +3,25 @@
 {% block title %}Experience{% endblock %}
 
 {% block content %}
+<section class="experience-section center">
+    <h2>Experience/Education</h2>
+    <div class="experience-list">
+        {% for exp in experience %}
+            <div class="experience-card">
+                <p>{{exp.entity}}</p>
+                <p>{{exp.title}}</p>
+                <p>{{exp.description}}</p>
+                <p>{{exp.period}}</p>
 
-{% for e in experience %}
-    <h1>{{e.entity}}</h1>
-    <h2>{{e.title}}</h2>
-    <p>{{e.description}}</p>
-    <p>{{e.period}}</p>
-    {% for tech in e.technologies.all %}
-        <p style="color:red;margin-left: 25px;font-weight:bold;">{{tech.name}}</p>
-    {% endfor %}
-    <hr>
-{% endfor %}
-{% endblock %}
+                <div class="technologies center">
+                    {% for tech in exp.technologies.all %}
+                    <label>{{ tech.name }}</label>
+                {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{% endblock content %}

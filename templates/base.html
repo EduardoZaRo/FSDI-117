@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/sections.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 </head>
 <body>
@@ -45,9 +46,15 @@
 
     {% block content %}{% endblock %}
 
-    <div style="background:rgb(82, 20, 31); height: 50px;display:flex;align-items:center;justify-content:center;">
-        <h2><i>Here is the footer</i></h2>
-    </div>
+    <footer>
+        <a href="{% url 'about' %}"><h2>Irvin</h2></a>
+        <nav class="nav-footer center">
+            <a href="{% url 'about' %}">About me</a>
+            <a href="{% url 'projects_list' %}">Projects</a>
+            <a href="{% url 'experience_list' %}">Experience</a>
+            <a href="">Contact</a>
+        </nav>
+    </footer>
 
 </body>
 </html>

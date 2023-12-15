@@ -38,6 +38,14 @@ Follow the breakpoints of Microsoft Documentation: https://learn.microsoft.com/e
         height: auto;
         overflow: auto;
     }
+
+    /* Footer */
+    footer{
+        flex-direction: column;
+   }
+   footer nav{
+        height: fit-content;
+   }
 }
 
 /* @media((min-width:641px) and (max-width:1007px)){ */

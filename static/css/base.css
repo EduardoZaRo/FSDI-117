@@ -38,6 +38,13 @@ html{
     padding: 0;
 }
 
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* Text style */
 h1{
     color: var(--secondary-color-600);
