@@ -137,7 +137,7 @@
     flex-direction: column;
 }
 
-#projects-form{
+#projects-form, #email-form{
     display: flex;
     flex-direction: column;
     height: 35rem;
@@ -146,4 +146,47 @@
     width:  35rem;
     padding: 3%;
     border: solid 1px var(--secondary-color);
+}
+
+/* Contact section */
+.contact-section {
+    flex-direction: column;
+    padding: 2rem;
+}
+
+#email-form input,
+#email-form textarea{
+    border: none;
+    border-bottom: 3px solid var(--secondary-color);
+    height: 2.5rem;
+    /* width: 30rem; */
+    outline: none;
+    background-color: var(-surface-color);
+}
+
+#email-form input::placeholder,
+#email-form textarea::placeholder{
+    color: var(--surface-color);
+}
+
+#email-form input:focus,
+#email-form textarea:focus{
+    border-bottom: 3px solid var(--primary-coloor-300);
+}
+
+#email-form input::hover,
+#email-form textarea::hover{
+    background-color: #FFFFFF;
+}
+
+.primary-button{
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 2.5% 5%;
+    color: var(--neutral-color);
+    background-color: var(--primary-color-300);
+}
+.primary-button:hover{
+    background: linear-gradient(115deg, var(--neutral-color) 0%, var(--primary-color-300) 100%)
 }
